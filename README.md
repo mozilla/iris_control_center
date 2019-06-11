@@ -1,3 +1,13 @@
+# Welcome to Mozilla Iris!
+
+This repository is used to create the front-end administrative Control Center for the Mozilla Iris automation tool.
+
+Please refer to these projects for more information:
+
+* [Iris](https://github.com/mozilla/iris) - a visual automation platform for the desktop, written in Python 3.
+* [Iris for Firefox](https://github.com/mozilla/iris_firefox) - tests written specifically for automation of the Firefox browser.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
