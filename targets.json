@@ -1,0 +1,3498 @@
+{
+ "targets": [
+  {
+   "icon": "firefox.png",
+   "name": "Firefox",
+   "settings": [
+    {
+     "default": "beta",
+     "label": "Firefox",
+     "name": "firefox",
+     "type": "list",
+     "value": [
+      "local",
+      "latest",
+      "latest-esr",
+      "latest-beta",
+      "nightly"
+     ]
+    },
+    {
+     "default": "en-US",
+     "label": "Locale",
+     "name": "locale",
+     "type": "list",
+     "value": [
+      "en-US",
+      "zh-CN",
+      "es-ES",
+      "de",
+      "fr",
+      "ru",
+      "ar",
+      "ko",
+      "pt-PT",
+      "vi",
+      "pl",
+      "tr",
+      "ro",
+      "ja",
+      "it",
+      "pt-BR",
+      "in",
+      "en-GB",
+      "id",
+      "ca",
+      "be",
+      "kk"
+     ]
+    },
+    {
+     "default": "0.5",
+     "label": "Mouse speed",
+     "name": "mouse",
+     "type": "list",
+     "value": [
+      "0.0",
+      "0.5",
+      "1.0",
+      "2.0"
+     ]
+    },
+    {
+     "label": "Debug using highlighting",
+     "name": "highlight",
+     "type": "checkbox"
+    },
+    {
+     "label": "Run disabled tests",
+     "name": "override",
+     "type": "checkbox"
+    },
+    {
+     "label": "Email results",
+     "name": "email",
+     "type": "checkbox"
+    },
+    {
+     "label": "Create TestRail report",
+     "name": "report",
+     "type": "checkbox"
+    }
+   ],
+   "tests": [
+    {
+     "children": [
+      {
+       "description": "Autofill is not automatically performed in Private Browsing.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/anti_tracking/autofill.py",
+       "name": "autofill",
+       "values": {
+        "enabled": false,
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "101673",
+        "test_suite_id": "1826"
+       }
+      },
+      {
+       "description": "Credit Card form inputs are not saved if they are given inside a Private Browsing session.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/anti_tracking/cc_data_not_saved.py",
+       "name": "cc_data_not_saved",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "extensions.formautofill.available": "on",
+         "extensions.formautofill.creditCards.available": true
+        },
+        "test_case_id": "101668",
+        "test_suite_id": "1826"
+       }
+      },
+      {
+       "description": "Firefox can be set to delete cookies when closed.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/anti_tracking/delete_cookies_when_closing.py",
+       "name": "delete_cookies_when_closing",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "106157",
+        "test_suite_id": "1826"
+       }
+      },
+      {
+       "description": "Form inputs are not saved if they are performed inside a private browsing session.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/anti_tracking/form_inputs_not_saved.py",
+       "name": "form_inputs_not_saved",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "extensions.formautofill.available": "on"
+        },
+        "test_case_id": "101669",
+        "test_suite_id": "1826"
+       }
+      },
+      {
+       "description": "Firefox can be set to no longer remember browsing and download history.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/anti_tracking/no_browsing_download_history.py",
+       "name": "no_browsing_download_history",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "browser.download.dir": "/Users/mwobensmith/.iris/runs/20190602173725/downloads",
+         "browser.download.folderList": 2,
+         "browser.download.useDownloadDir": true
+        },
+        "test_case_id": "105208",
+        "test_suite_id": "1826"
+       }
+      },
+      {
+       "description": "Firefox can be set to no longer accept cookies from visited websites.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/anti_tracking/no_cookies_from_visited.py",
+       "name": "no_cookies_from_visited",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "105525",
+        "test_suite_id": "1826"
+       }
+      },
+      {
+       "description": "Firefox can be set to no longer remember search and form history.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/anti_tracking/no_search_form_history.py",
+       "name": "no_search_form_history",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "105209",
+        "test_suite_id": "1826"
+       }
+      },
+      {
+       "description": "Firefox can be set to no longer accept third-party cookies.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/anti_tracking/no_third_party_cookies.py",
+       "name": "no_third_party_cookies",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "106156",
+        "test_suite_id": "1826"
+       }
+      },
+      {
+       "description": "The form inputs that were previously saved in a normal session are remembered in Private Browsing session.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/anti_tracking/private_browsing_autofill.py",
+       "name": "private_browsing_autofill",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "extensions.formautofill.available": "on"
+        },
+        "test_case_id": "101666",
+        "test_suite_id": "1826"
+       }
+      },
+      {
+       "description": "Credit Card form inputs that were previously saved in a normal session are remembered in Private Browsing session ",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/anti_tracking/saved_cc_available_in_private_session.py",
+       "name": "saved_cc_available_in_private_session",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "extensions.formautofill.available": "on",
+         "extensions.formautofill.creditCards.available": true
+        },
+        "test_case_id": "101667",
+        "test_suite_id": "1826"
+       }
+      }
+     ],
+     "name": "anti_tracking"
+    },
+    {
+     "children": [
+      {
+       "description": "Check browser doesn't show insecure webpage errors",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/antivirus/insecure_pages_do_not_show.py",
+       "name": "insecure_pages_do_not_show",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "225143",
+        "test_suite_id": "3063"
+       }
+      },
+      {
+       "description": "Test case: No crash or bluescreen after closing a tab while in private browsing mode.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/antivirus/no_bluescreen_after_private.py",
+       "name": "no_bluescreen_after_private",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "219584",
+        "test_suite_id": "3063"
+       }
+      },
+      {
+       "description": "[Kaspersky] No crash or bluescreen after closing a pinned tab",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/antivirus/no_crash_closing_pinned.py",
+       "name": "no_crash_closing_pinned",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "219585",
+        "test_suite_id": "3063"
+       }
+      }
+     ],
+     "name": "antivirus"
+    },
+    {
+     "children": [
+      {
+       "description": "No data loss after forced restart.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/antivirus_interoperability/data_after_restart.py",
+       "name": "data_after_restart",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "217874",
+        "test_suite_id": "3063"
+       }
+      },
+      {
+       "description": "Firefox Build Restart.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/antivirus_interoperability/firefox_build_restart.py",
+       "name": "firefox_build_restart",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "217866",
+        "test_suite_id": "3063"
+       }
+      },
+      {
+       "description": "Firefox hijacking.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/antivirus_interoperability/firefox_hijacking.py",
+       "name": "firefox_hijacking",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "217858",
+        "test_suite_id": "3063"
+       }
+      },
+      {
+       "description": "Firefox hijacking - default search engine.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/antivirus_interoperability/firefox_hijacking_default_search.py",
+       "name": "firefox_hijacking_default_search",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "219663",
+        "test_suite_id": "3063"
+       }
+      },
+      {
+       "description": "Alexa Top sites - no navigation issues.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/antivirus_interoperability/no_navigation_issues.py",
+       "name": "no_navigation_issues",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "217876",
+        "test_suite_id": "3063"
+       }
+      },
+      {
+       "description": "Firefox does not crash - all antivirus options enabled.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/antivirus_interoperability/not_crash_options_enabled.py",
+       "name": "not_crash_options_enabled",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "media.autoplay.default": 0
+        },
+        "test_case_id": "217878",
+        "test_suite_id": "3063"
+       }
+      },
+      {
+       "description": "[Avast] Page loads should not stall - 1373365.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/antivirus_interoperability/page_loads_not_stall.py",
+       "name": "page_loads_not_stall",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "217869",
+        "test_suite_id": "3063"
+       }
+      },
+      {
+       "description": "Firefox Regular Usage.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/antivirus_interoperability/regular_usage.py",
+       "name": "regular_usage",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "217855",
+        "test_suite_id": "3063"
+       }
+      },
+      {
+       "description": "Multiple Alexa top sites loaded in 5 tabs don't crash.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/antivirus_interoperability/sites_loaded_5_tabs_dont_crash.py",
+       "name": "sites_loaded_5_tabs_dont_crash",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "217877",
+        "test_suite_id": "3063"
+       }
+      },
+      {
+       "description": "Check security.enterprise_roots.enabled set to true doesn't break TLS Client Authentication.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/antivirus_interoperability/tls_authentication.py",
+       "name": "tls_authentication",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "225144",
+        "test_suite_id": "3063"
+       }
+      },
+      {
+       "description": "ebsites using TLS 1.3.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/antivirus_interoperability/tls_websites.py",
+       "name": "tls_websites",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "217857",
+        "test_suite_id": "3063"
+       }
+      }
+     ],
+     "name": "antivirus_interoperability"
+    },
+    {
+     "children": [
+      {
+       "description": "This test case adds links using 'CTRL' + 'ENTER' keys",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/add_links_keyboard_shortcuts.py",
+       "name": "add_links_keyboard_shortcuts",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "119484",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "Alt+UP/DOWN Keys - in the Awesome Bar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/alt_up_down_keys_in_awesomebar.py",
+       "name": "alt_up_down_keys_in_awesomebar",
+       "values": {
+        "blocked_by": "1488708",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108278",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case checks the awesomebar search after user input.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/awesomebar_search_after_user_input.py",
+       "name": "awesomebar_search_after_user_input",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108255",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case checks the position of the bookmark drop down for a highlighted link.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/bookmark_a_highlighted_link.py",
+       "name": "bookmark_a_highlighted_link",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "117526",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case verifies that changing the search engines positions the change is applied in awesome bar too.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/change_search_engine_positions.py",
+       "name": "change_search_engine_positions",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108262",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case deletes history from the URL bar completion list.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/delete_history_from_url_bar_completion_list.py",
+       "name": "delete_history_from_url_bar_completion_list",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "117530",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case disables one-off searches from the awesomebar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/disable_one_off_searches_from_awesomebar.py",
+       "name": "disable_one_off_searches_from_awesomebar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108258",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case disables search suggestions in awesomebar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/disable_search_suggestions.py",
+       "name": "disable_search_suggestions",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108263",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case disables the web search in the awesomebar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/disable_web_search_awesomebar.py",
+       "name": "disable_web_search_awesomebar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "browser.contentblocking.enabled": false
+        },
+        "test_case_id": "108254",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case checks the 'Drag and Drop within the awesomebar' option, if it searches for the dropped string.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/drag_and_drop_within_awesomebar.py",
+       "name": "drag_and_drop_within_awesomebar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "117524",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case clicks on a search result while the settings gear is focused.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/focus_settings_gear_and_click_a_search_result.py",
+       "name": "focus_settings_gear_and_click_a_search_result",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108264",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case performs key navigation in the URL drop-down in high contrast theme.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/key_navigation_high_contrast_theme.py",
+       "name": "key_navigation_high_contrast_theme",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "120136",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "Mouse handling - in the awesomebar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/mouse_handling_in_awesomebar.py",
+       "name": "mouse_handling_in_awesomebar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108282",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case checks that mouse position does not affect a search from awesomebar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/mouse_position_does_not_affect_a_search.py",
+       "name": "mouse_position_does_not_affect_a_search",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108256",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case checks that navigation to a page without entering the 'http://' protocol works correctly.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/navigate_page_without_entering_http_protocol.py",
+       "name": "navigate_page_without_entering_http_protocol",
+       "values": {
+        "locale": [
+         "en-US",
+         "zh-CN",
+         "es-ES",
+         "fr",
+         "de",
+         "ar",
+         "ru",
+         "ko",
+         "pt-PT",
+         "vi",
+         "pl",
+         "tr",
+         "ro",
+         "ja"
+        ],
+        "platform": "all",
+        "test_case_id": "117529",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case navigates through one-off searches using the keyboard keys",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/navigate_through_one_off_searches_using_keyboard_keys.py",
+       "name": "navigate_through_one_off_searches_using_keyboard_keys",
+       "values": {
+        "blocked_by": "1488708",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108267",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case checks that the one-off search feature does not affect the search engine preferences after updating the Firefox version.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/one_off_preferences_persist_after_firefox_update.py",
+       "name": "one_off_preferences_persist_after_firefox_update",
+       "values": {
+        "blocked_by": "1488708",
+        "enabled": false,
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "app.update.auto": true,
+         "app.update.badgeWaitTime": 10,
+         "app.update.interval": 7200,
+         "app.update.lastUpdateTime.background-update-timer": 1,
+         "app.update.promptWaitTime": 30,
+         "app.update.timerMinimumDelay": 10
+        },
+        "test_case_id": "108269",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case checks that one-off searches are displayed in the awesomebar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/one_off_searches_displayed_in_awesomebar.py",
+       "name": "one_off_searches_displayed_in_awesomebar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108248",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case perform one-offs searches in private browsing.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/one_off_searches_in_private_window.py",
+       "name": "one_off_searches_in_private_window",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108253",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case opens an URL in a new tab when the 'browser.search.openintab' preference is set to true.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/open_url_in_tab.py",
+       "name": "open_url_in_tab",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "117527",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case perform a search by keyboard only.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/perform_a_search_by_keyboard_only.py",
+       "name": "perform_a_search_by_keyboard_only",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "browser.contentblocking.enabled": false
+        },
+        "test_case_id": "108268",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case perform a search using an one-off focusing on the autocomplete drop-down.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/perform_a_search_using_an_one_off.py",
+       "name": "perform_a_search_using_an_one_off",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108249",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case checks the one-off search bar and the Settings gear after removing checks for each search engine from the Search Settings.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/remove_checks_from_search_engines.py",
+       "name": "remove_checks_from_search_engines",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108259",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case checks the 'Paste & Go' option if CRLF exists at the end of clipboard url.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/right_click_paste_and_go_location_bar.py",
+       "name": "right_click_paste_and_go_location_bar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "117523",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case navigates through the awesomebar suggestions/one-offs/settings gear using the right/left keys",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/right_left_keys_in_awesomebar.py",
+       "name": "right_left_keys_in_awesomebar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108277",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case checks that more search engines can be added and are well displayed on one-off searches bar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/search_engine_can_be_added.py",
+       "name": "search_engine_can_be_added",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108261",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case verifies that 'Search in New Tab' option works correctly using an one-off.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/search_in_new_tab_using_one_off_context_menu.py",
+       "name": "search_in_new_tab_using_one_off_context_menu",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108250",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case performs a search using one-offs while maximizing/minimizing the browser's window.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/search_using_one_offs_while_maximizing_or_minimizing_window.py",
+       "name": "search_using_one_offs_while_maximizing_or_minimizing_window",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "browser.contentblocking.enabled": false
+        },
+        "test_case_id": "108252",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case verifies that 'Set as Default Search Engine' option works correctly using an one-off.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/set_as_default_search_engine_using_one_off_context_menu.py",
+       "name": "set_as_default_search_engine_using_one_off_context_menu",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "browser.contentblocking.enabled": false
+        },
+        "test_case_id": "108251",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case checks that the Settings gear is displayed and can be accessed.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/settings_gear_is_displayed_and_can_be_accessed.py",
+       "name": "settings_gear_is_displayed_and_can_be_accessed",
+       "values": {
+        "blocked_by": "1542729",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "browser.contentblocking.enabled": false
+        },
+        "test_case_id": "108260",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case checks that telemetry data is collected for one-offs from new tab",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/telemetry_data_collected_for_one_offs_from_new_tab.py",
+       "name": "telemetry_data_collected_for_one_offs_from_new_tab",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108274",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case perform 2 selections at the same time.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/two_selections_at_the_same_time.py",
+       "name": "two_selections_at_the_same_time",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "108257",
+        "test_suite_id": "1902"
+       }
+      },
+      {
+       "description": "This test case checks that url bar properly unescapes ASCII url.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/awesomebar/url_bar_properly_unescapes_ascii_code.py",
+       "name": "url_bar_properly_unescapes_ascii_code",
+       "values": {
+        "locale": [
+         "en-US",
+         "zh-CN",
+         "es-ES",
+         "fr",
+         "de",
+         "ar",
+         "ru",
+         "ko",
+         "pt-PT",
+         "vi",
+         "pl",
+         "tr",
+         "ro",
+         "ja"
+        ],
+        "platform": "all",
+        "test_case_id": "118809",
+        "test_suite_id": "1902"
+       }
+      }
+     ],
+     "name": "awesomebar"
+    },
+    {
+     "children": [
+      {
+       "description": "This test verifies if PyAutoGUI/MSS screenshot and image search are working properly in a frame buffer environment.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/ci_tests/basic_image_search_screenshot.py",
+       "name": "basic_image_search_screenshot",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all"
+       }
+      },
+      {
+       "description": "This test will verify if PyAutoGUI mouse is working properly in a frame buffer environment.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/ci_tests/basic_mouse_functions.py",
+       "name": "basic_mouse_functions",
+       "values": {
+        "locale": "all",
+        "platform": "all"
+       }
+      },
+      {
+       "description": "Created to test fake keyboard inputs",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/ci_tests/fake_keyboard_input.py",
+       "name": "fake_keyboard_input",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "linux"
+       }
+      }
+     ],
+     "name": "ci_tests"
+    },
+    {
+     "children": [
+      {
+       "description": "Bookmark a website from the Library - History menu.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/drag_drop_html.py",
+       "name": "drag_drop_html",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "devtools.chrome.enabled": true
+        },
+        "test_case_id": "165088",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Drop html data in demopage opened in Private Window",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/drag_drop_html_private.py",
+       "name": "drag_drop_html_private",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165089",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Drop image data in demopage",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/drop_image_data.py",
+       "name": "drop_image_data",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "devtools.chrome.enabled": true
+        },
+        "test_case_id": "165086",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Drop image data in demopage opened in Private Window",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/drop_image_data_in_private_window.py",
+       "name": "drop_image_data_in_private_window",
+       "values": {
+        "blocked_by": "change_preference, drag_drop, 1328964",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "set_profile_pref": {
+         "devtools.chrome.enabled": true
+        },
+        "test_case_id": "165087",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Drop .jpeg image File in demopage",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/drop_jpeg_image.py",
+       "name": "drop_jpeg_image",
+       "values": {
+        "blocked_by": "change_preference, drag_drop, 1328964",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "set_profile_pref": {
+         "devtools.chrome.enabled": true
+        },
+        "test_case_id": "165084",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Drop single and multiple .jpeg images in demopage opened in Private Window",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/drop_jpeg_image_in_private_window.py",
+       "name": "drop_jpeg_image_in_private_window",
+       "values": {
+        "blocked_by": "get_asset_path, drag_drop, 1328964",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "set_profile_pref": {
+         "devtools.chrome.enabled": true
+        },
+        "test_case_id": "165085",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Drop .pdf File in demopage",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/drop_pdf_file.py",
+       "name": "drop_pdf_file",
+       "values": {
+        "blocked_by": "change_preference, drag_drop, 270",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "set_profile_pref": {
+         "devtools.chrome.enabled": true
+        },
+        "test_case_id": "165080",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Drop .pdf File in demopage",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/drop_pdf_file_in_private_window.py",
+       "name": "drop_pdf_file_in_private_window",
+       "values": {
+        "blocked_by": "shutil, os, 270",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "set_profile_pref": {
+         "devtools.chrome.enabled": true
+        },
+        "test_case_id": "165080",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Drop html data in demopage opened in Private Window",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/drop_png_image.py",
+       "name": "drop_png_image",
+       "values": {
+        "blocked_by": "270, drag_drop",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165089",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Drop single and multiple .png images in demopage opened in Private Window",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/drop_png_image_in_private_window.py",
+       "name": "drop_png_image_in_private_window",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165086",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Drop .txt File in demopage",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/drop_txt_file.py",
+       "name": "drop_txt_file",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165086",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Drop single and multiple .txt files in demopage opened in Private Window.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/drop_txt_file_in_private_window.py",
+       "name": "drop_txt_file_in_private_window",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165086",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Paste html data in demopage",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/paste_html.py",
+       "name": "paste_html",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165100",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Paste html data in demopage opened in Private Window",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/paste_html_in_private_window.py",
+       "name": "paste_html_in_private_window",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165101",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Paste image data in demopage opened",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/paste_image_data.py",
+       "name": "paste_image_data",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165098",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Paste image data in demopage opened in Private Window",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/paste_image_data_in_private_window.py",
+       "name": "paste_image_data_in_private_window",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165099",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Paste .jpeg File in demopage",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/paste_jpeg_file.py",
+       "name": "paste_jpeg_file",
+       "values": {
+        "blocked_by": {
+         "id": "1288773",
+         "platform": "['win', 'linux', 'osx']"
+        },
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165096",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Paste .jpeg File in demopage opened in Private Window",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/paste_jpeg_file_in_private_window.py",
+       "name": "paste_jpeg_file_in_private_window",
+       "values": {
+        "blocked_by": {
+         "id": "1288773",
+         "platform": "['win', 'linux', 'osx']"
+        },
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165097",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Paste .jpeg File in demopage",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/paste_pdf_file.py",
+       "name": "paste_pdf_file",
+       "values": {
+        "blocked_by": {
+         "id": "1288773",
+         "platform": "['win', 'linux', 'osx']"
+        },
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165096",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Paste .pdf File in demopage opened in Private Window",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/paste_pdf_file_in_private_window.py",
+       "name": "paste_pdf_file_in_private_window",
+       "values": {
+        "blocked_by": {
+         "id": "1288773",
+         "platform": "['win', 'linux', 'osx']"
+        },
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165093",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Paste .png File in demopage",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/paste_png_file.py",
+       "name": "paste_png_file",
+       "values": {
+        "blocked_by": {
+         "id": "1288773",
+         "platform": "['win', 'linux', 'osx']"
+        },
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165094",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Paste .png File in demopage opened in Private Window",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/paste_png_file_in_private_window.py",
+       "name": "paste_png_file_in_private_window",
+       "values": {
+        "blocked_by": {
+         "id": "1288773",
+         "platform": "['win', 'linux', 'osx']"
+        },
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165095",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Paste .txt File in demopage",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/paste_txt_file.py",
+       "name": "paste_txt_file",
+       "values": {
+        "blocked_by": {
+         "id": "1288773",
+         "platform": "['win', 'linux', 'osx']"
+        },
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165090",
+        "test_suite_id": "102"
+       }
+      },
+      {
+       "description": "Paste .txt File in demopage",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/drag_and_drop/paste_txt_file_in_private_window.py",
+       "name": "paste_txt_file_in_private_window",
+       "values": {
+        "blocked_by": {
+         "id": "1288773",
+         "platform": "['win', 'linux', 'osx']"
+        },
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "165090",
+        "test_suite_id": "102"
+       }
+      }
+     ],
+     "name": "drag_and_drop"
+    },
+    {
+     "children": [
+      {
+       "description": "Check Find Toolbar is not persistent in a new tab / window",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/check_find_toolbar_not_persistent_in_new_tab.py",
+       "name": "check_find_toolbar_not_persistent_in_new_tab",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127262",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search again after navigating to another page",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_after_navigating.py",
+       "name": "find_after_navigating",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127264",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Check \"Find Again\" works on a new tab/window ",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_again_works_on_new_tab_window.py",
+       "name": "find_again_works_on_new_tab_window",
+       "values": {
+        "blocked_by": "id: 913536",
+        "exclude": [
+         "linux",
+         "win"
+        ],
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127263",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Check the highlight of the found item",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_check_highlight.py",
+       "name": "find_check_highlight",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127240",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Check the number of found items is correctly displayed",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_check_number_items.py",
+       "name": "find_check_number_items",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127241",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search on a window with a different size",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_different_size.py",
+       "name": "find_different_size",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127247",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search when High Contrast is activated",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_high_contrast.py",
+       "name": "find_high_contrast",
+       "values": {
+        "blocked_by": "id: issue_1667",
+        "exclude": "['win', 'linux', 'osx']",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127254",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "\"Highlight All\" button works properly",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_highlight_all.py",
+       "name": "find_highlight_all",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127451",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Check the highlight items when the page is zoomed in/out",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_in_page_zoomed.py",
+       "name": "find_in_page_zoomed",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127243",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search on a PDF page",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_in_pdf.py",
+       "name": "find_in_pdf",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127271",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search on a page with RTL language",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_in_rtl.py",
+       "name": "find_in_rtl",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127251",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search on a text file (.txt)",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_in_txt_file.py",
+       "name": "find_in_txt_file",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127273",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search on a XML page",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_in_xml_file.py",
+       "name": "find_in_xml_file",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127272",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search on a XSL file. [Test is unstable on Linux.]",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_in_xsl_file.py",
+       "name": "find_in_xsl_file",
+       "values": {
+        "enabled": false,
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127274",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search for a long String",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_long_word.py",
+       "name": "find_long_word",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127244",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "\"Match Case\" button works properly",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_match_case.py",
+       "name": "find_match_case",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127452",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Navigate back and forward on a page",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_navigate_back_forward.py",
+       "name": "find_navigate_back_forward",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127261",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search for an inexistent String on the page",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_nonexistent_string.py",
+       "name": "find_nonexistent_string",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127245",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Remove part of the searched item",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_remove_part.py",
+       "name": "find_remove_part",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127246",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search for text that appears on buttons",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_search_button.py",
+       "name": "find_search_button",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127250",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search Links only",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_search_links_only.py",
+       "name": "find_search_links_only",
+       "values": {
+        "blocked_by": "issue_1628 [Investigate highlight failure in a few Find Toolbar tests ]",
+        "exclude": "['win', 'linux', 'osx']",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127252",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search on a page with small fonts",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_search_small_fonts.py",
+       "name": "find_search_small_fonts",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127279",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search on a page with stylized words",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_search_stylized_words.py",
+       "name": "find_search_stylized_words",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127280",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search on a page with vertical text [Blocked by a bug of not focusing find item if text is larger than a screen]",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_search_vertical_text.py",
+       "name": "find_search_vertical_text",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127278",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search a word that contains special characters (1)",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_special_characters_de.py",
+       "name": "find_special_characters_de",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127275",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search a word that contains special characters (2)",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_special_characters_ja.py",
+       "name": "find_special_characters_ja",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127276",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search for characters like \" #$%^&*( +-<>\" ? !",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_special_characters_symbols.py",
+       "name": "find_special_characters_symbols",
+       "values": {
+        "enabled": false,
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127277",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "\"Whole Words\" button works properly",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_whole_words.py",
+       "name": "find_whole_words",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127453",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Check the highlight of the found items on a page with dark background",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/find_with_dark_background.py",
+       "name": "find_with_dark_background",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127242",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Navigate through found items",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/navigate_found_items.py",
+       "name": "navigate_found_items",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127249",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Navigate through found items using ENTER",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/navigate_found_items_using_enter.py",
+       "name": "navigate_found_items_using_enter",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127258",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Navigate through found items using CTRL+G / CTRL+SHIFT+G",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/navigate_found_items_using_shortcuts.py",
+       "name": "navigate_found_items_using_shortcuts",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127257",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Navigate through found items using F3 / SHIFT+F3",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/navigate_found_items_with_function_keys.py",
+       "name": "navigate_found_items_with_function_keys",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127256",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Navigate through Quick Find items [Failed due to absence of pink highlight]",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/navigate_quick_find.py",
+       "name": "navigate_quick_find",
+       "values": {
+        "blocked_by": "id issue_1628",
+        "exclude": "['win', 'linux', 'osx']",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127260",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Navigate through Search Links only results ",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/navigate_search_links_only_results.py",
+       "name": "navigate_search_links_only_results",
+       "values": {
+        "blocked_by": "id issue_1628",
+        "exclude": "['win', 'linux', 'osx']",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127253",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Open find toolbar",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/open_find_toolbar.py",
+       "name": "open_find_toolbar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127238",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Perform a search",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/perform_find_search.py",
+       "name": "perform_find_search",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127239",
+        "test_suite_id": "2085"
+       }
+      },
+      {
+       "description": "Search with the Quick Find [Failed due to bug (other items are not highlighted as pink)]",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/find_toolbar/search_quick_find.py",
+       "name": "search_quick_find",
+       "values": {
+        "blocked_by": "id issue_1628",
+        "exclude": "['win', 'linux', 'osx']",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "127259",
+        "test_suite_id": "2085"
+       }
+      }
+     ],
+     "name": "find_toolbar"
+    },
+    {
+     "children": [
+      {
+       "description": "Bookmark a website from the Library - History menu.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/bookmark_website_from_library.py",
+       "name": "bookmark_website_from_library",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "ten_bookmarks",
+        "test_case_id": "174043",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Bookmark a website from the Library - History menu - Change Name/ Folder/ Tags.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/bookmark_website_from_library_change_name_folder_tags.py",
+       "name": "bookmark_website_from_library_change_name_folder_tags",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "174044",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Navigate through the History menu from the Bookmark toolbar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/bookmarks_toolbar_navigate_through_history.py",
+       "name": "bookmarks_toolbar_navigate_through_history",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "ten_bookmarks",
+        "test_case_id": "174032",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Copy a History time range from the History sidebar and paste it to the Bookmarks toolbar, then use the 'Open All in Tabs' option on the saved bookmark.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/bookmarks_toolbar_open_all_in_tabs.py",
+       "name": "bookmarks_toolbar_open_all_in_tabs",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "120126",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Open all tabs from a specific time range saved in Bookmark Toolbar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/bookmarks_toolbar_open_all_tabs_specific_time_range.py",
+       "name": "bookmarks_toolbar_open_all_tabs_specific_time_range",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "174035",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Copy a website from the History sidebar and paste it to the Bookmarks toolbar, then open it.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/bookmarks_toolbar_open_site.py",
+       "name": "bookmarks_toolbar_open_site",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "ten_bookmarks",
+        "test_case_id": "120128",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Clear all the History.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/clear_all_history.py",
+       "name": "clear_all_history",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "172045",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "No sections selected in Clear Recent History window.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/clear_recent_history_no_selections.py",
+       "name": "clear_recent_history_no_selections",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "172046",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Clear Recent History from a predefined time range.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/clear_recent_history_predefined_time_range.py",
+       "name": "clear_recent_history_predefined_time_range",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "172044",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Check that the 'Clear Recent History' window is displayed properly.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/clear_recent_history_window.py",
+       "name": "clear_recent_history_window",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "172043",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Click on a website from the Library.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/click_website_from_library.py",
+       "name": "click_website_from_library",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "172043",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Copy the history menu and paste it into the Bookmark toolbar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/copy_history_menu_into_bookmark_toolbar.py",
+       "name": "copy_history_menu_into_bookmark_toolbar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "ten_bookmarks",
+        "test_case_id": "174031",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Copy a history time range from the Library and paste it into the Bookmark Toolbar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/copy_history_time_range_paste_it_bookmark_toolbar.py",
+       "name": "copy_history_time_range_paste_it_bookmark_toolbar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "174034",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Copy a website from the Library - History menu and paste it in to the Bookmark Toolbar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/copy_site_from_library_paste_it_on_bookmark_toolbar.py",
+       "name": "copy_site_from_library_paste_it_on_bookmark_toolbar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "174045",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Custom sections selected in 'Clear Recent History' window",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/custom_clear_recent_history_window.py",
+       "name": "custom_clear_recent_history_window",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "datareporting.policy.firstRunURL": ""
+        },
+        "profile": "brand_new",
+        "test_case_id": "172047",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Delete history from Library context menu",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/delete_history_from_library_context_menu.py",
+       "name": "delete_history_from_library_context_menu",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "178346",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Delete a history time range from the Library.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/delete_history_time_range_from_library.py",
+       "name": "delete_history_time_range_from_library",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "174036",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Dismiss the 'Clear Recent History' window.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/dismiss_clear_recent_history_window.py",
+       "name": "dismiss_clear_recent_history_window",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "172048",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Forget all the history from the last 5 minutes.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/forget_history_last_5_mins.py",
+       "name": "forget_history_last_5_mins",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "174072",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Open the History Menu and check the Recent History list.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_menu.py",
+       "name": "history_menu",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "118799",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Copy a website from the Library - History menu and Paste it in to the URL bar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_menu_copy_site_to_url_bar.py",
+       "name": "history_menu_copy_site_to_url_bar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "ten_bookmarks",
+        "test_case_id": "174047",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Delete a page from the Library - History menu.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_menu_delete_page.py",
+       "name": "history_menu_delete_page",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "ten_bookmarks",
+        "test_case_id": "174048",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Verify if the deleted page from History is retained in auto-complete.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_menu_delete_site_verify_if_remembered.py",
+       "name": "history_menu_delete_site_verify_if_remembered",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "174049",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Verify if the deleted page from History is not retained in auto-complete.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_menu_delete_site_verify_is_not_remembered.py",
+       "name": "history_menu_delete_site_verify_is_not_remembered",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "216273",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Forget a page from the Library - History menu.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_menu_forget_page.py",
+       "name": "history_menu_forget_page",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "174050",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Verify if the deleted page from History is not retained by auto-complete.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_menu_forgotten_site_verify_is_not_remembered.py",
+       "name": "history_menu_forgotten_site_verify_is_not_remembered",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "174051",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Open a website from the Recent History list.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_menu_open_site.py",
+       "name": "history_menu_open_site",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "118807",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Open a website from the Recent History list in a private window.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_menu_open_site_in_private_window.py",
+       "name": "history_menu_open_site_in_private_window",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "118808",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Page visits show in Recent history.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_menu_recent_history.py",
+       "name": "history_menu_recent_history",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "178345",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Open the History sidebar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar.py",
+       "name": "history_sidebar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "118811",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "This is a test that bookmarks a page from the History sidebar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_bookmark_site.py",
+       "name": "history_sidebar_bookmark_site",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "120123",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "This is a test that bookmarks a page from the History sidebar with custom settings.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_bookmark_site_custom_settings.py",
+       "name": "history_sidebar_bookmark_site_custom_settings",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "120124",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Copy a website from the History sidebar and paste it to the Bookmarks toolbar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_copy_site_to_bookmarks_toolbar.py",
+       "name": "history_sidebar_copy_site_to_bookmarks_toolbar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "120127",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Copy a website from the History sidebar and paste it into the URL bar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_copy_site_to_url_bar.py",
+       "name": "history_sidebar_copy_site_to_url_bar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "120129",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Copy a History time range from the History sidebar and paste it to the Bookmarks toolbar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_copy_time_range.py",
+       "name": "history_sidebar_copy_time_range",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "120125",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Delete a page from the History sidebar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_delete_site.py",
+       "name": "history_sidebar_delete_site",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "120130",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Delete a page from the History sidebar and verify it is still remembered in the URL bar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_delete_site_verify_if_remembered.py",
+       "name": "history_sidebar_delete_site_verify_if_remembered",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "120131",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Delete a time range from the History sidebar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_delete_time_range.py",
+       "name": "history_sidebar_delete_time_range",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "120134",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Dismiss the search from the History sidebar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_dismiss_search.py",
+       "name": "history_sidebar_dismiss_search",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "119442",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Forget a page from the History sidebar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_forget_site.py",
+       "name": "history_sidebar_forget_site",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "120132",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Forget a page from the History sidebar and verify it is not remembered in the URL bar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_forget_site_verify_if_remembered.py",
+       "name": "history_sidebar_forget_site_verify_if_remembered",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "120133",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "This is a test for the 'Open All in Tabs' option from the History sidebar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_open_all_in_tabs.py",
+       "name": "history_sidebar_open_all_in_tabs",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "120117",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "This is a test that opens a page from the History sidebar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_open_site.py",
+       "name": "history_sidebar_open_site",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "120116",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "This is a test that opens a page from the History sidebar using the 'Open' button from the context menu.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_open_site_context_menu.py",
+       "name": "history_sidebar_open_site_context_menu",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "120119",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "This is a test that opens a page from the History sidebar using the 'Open in a New Tab' button from the context menu.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_open_site_in_new_tab.py",
+       "name": "history_sidebar_open_site_in_new_tab",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "120120",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "This is a test that opens a page from the History sidebar using the 'Open in a New Window' button from the context menu.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_open_site_in_new_window.py",
+       "name": "history_sidebar_open_site_in_new_window",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "120121",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "This is a test that opens a page from the History sidebar using the 'Open in a New Private Window' button from the context menu.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_open_site_in_private_window.py",
+       "name": "history_sidebar_open_site_in_private_window",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "120122",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Search in History sidebar for an available website.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_search_available_site.py",
+       "name": "history_sidebar_search_available_site",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "119440",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Search in History sidebar for an unavailable website.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_search_unavailable_site.py",
+       "name": "history_sidebar_search_unavailable_site",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "119441",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "This is a test of the sorting options from the sidebar - By Date.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_sort_by_date.py",
+       "name": "history_sidebar_sort_by_date",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "119446",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "This is a test of the Sorting options from the sidebar - By Date and Site.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_sort_by_date_and_site.py",
+       "name": "history_sidebar_sort_by_date_and_site",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "119444",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "This is a test of the sorting options from the sidebar - By Last Visited.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_sort_by_last_visited.py",
+       "name": "history_sidebar_sort_by_last_visited",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "119448",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "This is a test of the sorting options from the sidebar - By Most Visited.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_sort_by_most_visited.py",
+       "name": "history_sidebar_sort_by_most_visited",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "119447",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "This is a test of the sorting options from the sidebar - By Site.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_sort_by_site.py",
+       "name": "history_sidebar_sort_by_site",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "119445",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "This is a test of the sorting options from the sidebar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/history_sidebar_sorting.py",
+       "name": "history_sidebar_sorting",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "119443",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Open all the history from a history time range.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/library_open_all_in_tabs.py",
+       "name": "library_open_all_in_tabs",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "174033",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Use Open button from the contextual options.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/library_open_site_context_menu.py",
+       "name": "library_open_site_context_menu",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "ten_bookmarks",
+        "test_case_id": "174038",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Use 'Open in a New Window' button from the contextual options.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/library_open_site_in_a_new_window.py",
+       "name": "library_open_site_in_a_new_window",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "174040",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Use 'Open in a New Tab' button from the contextual options.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/library_open_site_in_new_tab.py",
+       "name": "library_open_site_in_new_tab",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "ten_bookmarks",
+        "test_case_id": "174039",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Use 'Open in a Private Window' button from the contextual options.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/open_in_a_private_window_from_contextual_options.py",
+       "name": "open_in_a_private_window_from_contextual_options",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "ten_bookmarks",
+        "test_case_id": "174041",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Open a website in the current tab and then check it is displayed in the Recent History list.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/open_site_in_current_tab.py",
+       "name": "open_site_in_current_tab",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "118800",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Open a website in a new tab and then check it is displayed in the Recent History list.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/open_site_in_new_tab.py",
+       "name": "open_site_in_new_tab",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "118802",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Open a website in a new window and then check it is displayed in the Recent History list.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/open_site_in_new_window.py",
+       "name": "open_site_in_new_window",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "118805",
+        "test_suite_id": "2000"
+       }
+      },
+      {
+       "description": "Open a website in a private window and then check it is not displayed in the Recent History list.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/history/open_site_in_private_window.py",
+       "name": "open_site_in_private_window",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "profile": "brand_new",
+        "test_case_id": "118806",
+        "test_suite_id": "2000"
+       }
+      }
+     ],
+     "name": "history"
+    },
+    {
+     "children": [
+      {
+       "description": "Zooming in and out of a PDF file works properly using pdf.js",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/in_browser_pdf/zooming_works_properly.py",
+       "name": "zooming_works_properly",
+       "values": {
+        "blocked_by": "get_asset_path() not supported, change preference works incorrectly",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "3928",
+        "test_suite_id": "65"
+       }
+      }
+     ],
+     "name": "in_browser_pdf"
+    },
+    {
+     "children": [
+      {
+       "description": "\"CNN\" heavy content website is properly loaded and works as intended",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/plugin_compatibility/cnn_heavy_content.py",
+       "name": "cnn_heavy_content",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "125534",
+        "test_suite_id": "2074"
+       }
+      },
+      {
+       "description": "\"NASA TV\" heavy content website is properly loaded and works as intended",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/plugin_compatibility/nasa_tv_heavy_content.py",
+       "name": "nasa_tv_heavy_content",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "125533",
+        "test_suite_id": "2074"
+       }
+      },
+      {
+       "description": "\"The Swish Life\" is properly loaded and works as intended",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/plugin_compatibility/the_swish_life.py",
+       "name": "the_swish_life",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "125532",
+        "test_suite_id": "2074"
+       }
+      }
+     ],
+     "name": "plugin_compatibility"
+    },
+    {
+     "children": [
+      {
+       "description": "Changing the default search engine from Search bar does not work first time.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/change_the_default_search_engine.py",
+       "name": "change_the_default_search_engine",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "111384",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "Ctrl+Click/Command awesomebar entry with 'Switch to Tab' doesn't open new tab.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/ctrl_click_with_switch_to_tab_opens_page_in_the_same_tab.py",
+       "name": "ctrl_click_with_switch_to_tab_opens_page_in_the_same_tab",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "111374",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "The default search provider can be changed.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/default_search_provider_can_be_changed.py",
+       "name": "default_search_provider_can_be_changed",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "4265",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "A history of previous searches is kept for all the search fields.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/history_of_previous_searches_is_kept.py",
+       "name": "history_of_previous_searches_is_kept",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "4270",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "All the keyboard shortcuts available for the Search Bar are working properly.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/keyboard_shortcuts_work_in_search_bar.py",
+       "name": "keyboard_shortcuts_work_in_search_bar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "4278",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "Middle clicking search results does not open a new tab.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/middle_clicking_search_results_open_new_tab.py",
+       "name": "middle_clicking_search_results_open_new_tab",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "111373",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "The list of one-click search engines can be reordered.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/one_click_search_engines_list_can_be_reordered.py",
+       "name": "one_click_search_engines_list_can_be_reordered",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "4277",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "Items from the list of one-click search engines can be disabled and enabled.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/one_off_search_engines_can_be_disabled_enabled.py",
+       "name": "one_off_search_engines_can_be_disabled_enabled",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "4275",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "Items from the list of one-click search engines can be removed and restored.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/one_off_search_engines_can_be_removed_and_restored.py",
+       "name": "one_off_search_engines_can_be_removed_and_restored",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "4276",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "Removing search engines from preferences disabled 'Restore defaults' button.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/remove_search_engine.py",
+       "name": "remove_search_engine",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "111378",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "Right click on a result from Awesomebar closes the dropdown.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/right_click_on_a_suggestion_from_awesomebar.py",
+       "name": "right_click_on_a_suggestion_from_awesomebar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "111375",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "The options available for the Search Bar are working properly.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/search_bar_options_work_properly.py",
+       "name": "search_bar_options_work_properly",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "4271",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "The Search Bar provides valid results for specific search terms.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/search_bar_provides_valid_results.py",
+       "name": "search_bar_provides_valid_results",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "4264",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "The Search Bar accepts submission with no input.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/search_bar_submision_with_no_input.py",
+       "name": "search_bar_submision_with_no_input",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "4263",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "Search Code Testing: DuckDuckGo - US.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/search_code_testing_DuckDuckGo_us.py",
+       "name": "search_code_testing_DuckDuckGo_us",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "218335",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "Search Code Testing: Bing - US",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/search_code_testing_bing_us.py",
+       "name": "search_code_testing_bing_us",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "218334",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "Search results can be displayed directly in a new tab.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/search_results_can_be_displayed_directly_in_a_new_tab.py",
+       "name": "search_results_can_be_displayed_directly_in_a_new_tab",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "4266",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "Search suggestions are displayed by the field available on the about:newtab page.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/search_suggestions_are_displayed_in_search_bar.py",
+       "name": "search_suggestions_are_displayed_in_search_bar",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "4268",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "Search suggestions can be disabled.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/search_suggestions_can_be_disabled.py",
+       "name": "search_suggestions_can_be_disabled",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "4273",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "Awesomebar results don't show the correct search engine when searching with search engine keywords.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/search_with_search_engines_keywords.py",
+       "name": "search_with_search_engines_keywords",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "111378",
+        "test_suite_id": "83"
+       }
+      },
+      {
+       "description": "The user is able to add new search engines.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/search/user_is_able_to_add_new_search_engines.py",
+       "name": "user_is_able_to_add_new_search_engines",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "4272",
+        "test_suite_id": "83"
+       }
+      }
+     ],
+     "name": "search"
+    },
+    {
+     "children": [
+      {
+       "description": "Check for Dark and Light themes.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/themes/check_for_dark_and_light_themes.py",
+       "name": "check_for_dark_and_light_themes",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "15266",
+        "test_suite_id": "494"
+       }
+      },
+      {
+       "description": "Check the appearance of browser with Default Themes applied in Menu Bar.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/themes/check_the_browser_appearance_with_default_themes.py",
+       "name": "check_the_browser_appearance_with_default_themes",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "15267",
+        "test_suite_id": "494"
+       }
+      },
+      {
+       "description": "There are no glitches in tab layout.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/themes/no_glitches_in_tab_layout.py",
+       "name": "no_glitches_in_tab_layout",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "15268",
+        "test_suite_id": "494"
+       }
+      }
+     ],
+     "name": "themes"
+    },
+    {
+     "children": [
+      {
+       "description": "This is a test of the 'About Firefox' window controls",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/toolbars_window_controls/about_firefox_controls.py",
+       "name": "about_firefox_controls",
+       "values": {
+        "locale": [
+         "en-US",
+         "zh-CN",
+         "es-ES",
+         "fr",
+         "de",
+         "ar",
+         "ru",
+         "ko",
+         "pt-PT",
+         "vi",
+         "pl",
+         "tr",
+         "ro",
+         "ja"
+        ],
+        "platform": "all",
+        "test_case_id": "120465",
+        "test_suite_id": "1998"
+       }
+      },
+      {
+       "description": "This is a test case that checks that Browser Control Console work as expected.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/toolbars_window_controls/browser_control_console.py",
+       "name": "browser_control_console",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "120464",
+        "test_suite_id": "1998"
+       }
+      },
+      {
+       "description": "Browser controls work as expected.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/toolbars_window_controls/browser_controls_upper_corner.py",
+       "name": "browser_controls_upper_corner",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "119481",
+        "test_suite_id": "1998"
+       }
+      },
+      {
+       "description": "This is a test of the 'Confirm close multiple tabs' window controls",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/toolbars_window_controls/confirm_close_multiple_tabs_controls.py",
+       "name": "confirm_close_multiple_tabs_controls",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "preferences": {
+         "browser.tabs.warnOnClose": true,
+         "browser.warnOnQuit": true
+        },
+        "profile": "brand_new",
+        "test_case_id": "120468",
+        "test_suite_id": "1998"
+       }
+      },
+      {
+       "description": "This is a test of the Download dialog controls.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/toolbars_window_controls/download_dialog_controls.py",
+       "name": "download_dialog_controls",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "118801",
+        "test_suite_id": "1998"
+       }
+      },
+      {
+       "description": "This is a test case that checks that the drag space can be activated properly.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/toolbars_window_controls/drag_space.py",
+       "name": "drag_space",
+       "values": {
+        "exclude": "linux",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "118184",
+        "test_suite_id": "1998"
+       }
+      },
+      {
+       "description": "This is a test case that checks the Hamburger menu > Customize opens the customize page.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/toolbars_window_controls/hamburger_menu_customize.py",
+       "name": "hamburger_menu_customize",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all"
+       }
+      },
+      {
+       "description": "This is a test of the library window controls.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/toolbars_window_controls/library_controls.py",
+       "name": "library_controls",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "120467",
+        "test_suite_id": "1998"
+       }
+      },
+      {
+       "description": "This is a test of the Print dialog controls.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/toolbars_window_controls/print_dialog_controls.py",
+       "name": "print_dialog_controls",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "118804",
+        "test_suite_id": "1998"
+       }
+      },
+      {
+       "description": "This is a test of the Save Image dialog controls.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/toolbars_window_controls/save_image_controls.py",
+       "name": "save_image_controls",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "118803",
+        "test_suite_id": "1998"
+       }
+      },
+      {
+       "description": "This is a test of the sidebar controls.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/toolbars_window_controls/sidebar_controls.py",
+       "name": "sidebar_controls",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "119466",
+        "test_suite_id": "1998"
+       }
+      },
+      {
+       "description": "Checks if the Title Bar can be activated/deactivated properly from Customize menu",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/toolbars_window_controls/title_bar_activation.py",
+       "name": "title_bar_activation",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "118183",
+        "test_suite_id": "1998"
+       }
+      },
+      {
+       "description": "This is a test case that checks if the Web Console controls work as expected.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/toolbars_window_controls/web_console_controls.py",
+       "name": "web_console_controls",
+       "values": {
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "120137",
+        "test_suite_id": "1998"
+       }
+      },
+      {
+       "description": "This is a test case that checks that Developer Toolbar controls work as expected.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/toolbars_window_controls/web_developer_menu.py",
+       "name": "web_developer_menu",
+       "values": {
+        "exclude": "['win', 'linux', 'osx']",
+        "locale": [
+         "en-US"
+        ],
+        "platform": "all",
+        "test_case_id": "119483",
+        "test_suite_id": "1998"
+       }
+      }
+     ],
+     "name": "toolbars_window_controls"
+    },
+    {
+     "children": [
+      {
+       "description": "This is a unit test to verify basic Firefox build info.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/unit_tests/firefox_build_apis.py",
+       "name": "firefox_build_apis",
+       "values": {
+        "locale": "all",
+        "platform": "all"
+       }
+      },
+      {
+       "description": "This is a unit test for keyboard events.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/unit_tests/keyboard_shortcuts.py",
+       "name": "keyboard_shortcuts",
+       "values": {
+        "blocked_by": "issue_1682",
+        "locale": "all",
+        "platform": "all"
+       }
+      },
+      {
+       "description": "This is a unit test for hover, and click.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/unit_tests/mouse_events.py",
+       "name": "mouse_events",
+       "values": {
+        "locale": "all",
+        "platform": "all"
+       }
+      },
+      {
+       "description": "This is a unit test for ocr.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/unit_tests/ocr.py",
+       "name": "ocr",
+       "values": {
+        "locale": "all",
+        "platform": "all"
+       }
+      },
+      {
+       "description": "Unit tests for Settings Class",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/unit_tests/settings.py",
+       "name": "settings",
+       "values": {
+        "locale": "all",
+        "platform": "all"
+       }
+      }
+     ],
+     "name": "unit_tests"
+    },
+    {
+     "children": [
+      {
+       "description": "This is a test for Firefox background update.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/update/background_update.py",
+       "name": "background_update",
+       "values": {
+        "enabled": false,
+        "locale": "all",
+        "platform": "all",
+        "preferences": {
+         "app.update.auto": true,
+         "app.update.badgeWaitTime": 10,
+         "app.update.interval": 7200,
+         "app.update.lastUpdateTime.background-update-timer": 1,
+         "app.update.promptWaitTime": 30,
+         "app.update.timerMinimumDelay": 10
+        }
+       }
+      },
+      {
+       "description": "This is a test for Firefox manual update.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/firefox/update/manual_update.py",
+       "name": "manual_update",
+       "values": {
+        "enabled": false,
+        "locale": "all",
+        "platform": "all",
+        "preferences": {
+         "app.update.auto": true
+        }
+       }
+      }
+     ],
+     "name": "update"
+    }
+   ]
+  },
+  {
+   "icon": "sample.png",
+   "name": "Sample",
+   "settings": [
+    {
+     "default": "build1",
+     "label": "Build",
+     "name": "build",
+     "type": "list",
+     "value": [
+      "build1",
+      "build2",
+      "build3"
+     ]
+    },
+    {
+     "default": "en-US",
+     "label": "Locale",
+     "name": "locale",
+     "type": "list",
+     "value": [
+      "en-US",
+      "es-ES"
+     ]
+    },
+    {
+     "label": "Debug using highlighting",
+     "name": "highlight",
+     "type": "checkbox"
+    },
+    {
+     "label": "Run disabled tests",
+     "name": "override",
+     "type": "checkbox"
+    },
+    {
+     "label": "I am special",
+     "name": "special",
+     "type": "checkbox"
+    }
+   ],
+   "tests": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "description": "This test is just an experiment for Sample.",
+         "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/sample/section1/section1_1/test_1.py",
+         "name": "test_1",
+         "values": {
+          "custom_value": "banana",
+          "locale": [
+           "en-US",
+           "es-ES",
+           "ro"
+          ],
+          "meta": "Sample Test experiment",
+          "platform": "all"
+         }
+        }
+       ],
+       "name": "section1_1"
+      }
+     ],
+     "name": "section1"
+    },
+    {
+     "children": [
+      {
+       "description": "This test is just an experiment for Sample.",
+       "file": "/Users/mwobensmith/PycharmProjects/iris2/tests/sample/section2/test_2.py",
+       "name": "test_2",
+       "values": {
+        "custom_value": "apple",
+        "locale": "all",
+        "meta": "Sample Test experiment2",
+        "platform": "all"
+       }
+      }
+     ],
+     "name": "section2"
+    }
+   ]
+  }
+ ]
+}

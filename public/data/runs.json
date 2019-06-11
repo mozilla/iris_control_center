@@ -1,0 +1,44 @@
+{
+ "runs": [
+  {
+   "duration": 0,
+   "failed": 8,
+   "id": "20190329085036",
+   "locale": "en-US",
+   "target": "firefox",
+   "total": 20
+  },
+  {
+   "duration": 128.23933100700378,
+   "failed": 0,
+   "id": "20190510115226",
+   "locale": "en-US",
+   "target": "firefox",
+   "total": 3
+  },
+  {
+   "duration": 507.30459117889404,
+   "failed": 1,
+   "id": "20190510122940",
+   "locale": "en-US",
+   "target": "firefox",
+   "total": 14
+  },
+  {
+   "duration": 62.23074388504028,
+   "failed": 0,
+   "id": "20190514115422",
+   "locale": "en-US",
+   "target": "firefox",
+   "total": 1
+  },
+  {
+   "duration": 11711.23234510421753,
+   "failed": 0,
+   "id": "20190529115718",
+   "locale": "en-US",
+   "target": "firefox",
+   "total": 3
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+[Bugzilla] section has properties with no values: [api_key]. Tests blocked by Bugzilla issues will be automatically skipped.
+[GitHub] section has properties with no values: [github_key]. Tests blocked by GitHub issues will be automatically skipped.
+Desired target: firefox
+Loading test images...
+1
+2
+Found target named Firefox
+List of all tests found: [c:\github\iris2\tests\firefox\antivirus\insecure_pages_do_not_show.py]
+
+----------------------------------------------Test session firefox started----------------------------------------------
+
+Iris settings:
+application: firefox, rerun: False, highlight: False, clear: False, email: False, image_debug: False, level: 20, control: False, locale: en-US, mouse: 0.5, no_check: False, override: False, port: 2000, report: False, test: insecure_pages_do, workdir: C:\Users\paul.silaghi\.iris, exclude: , resize: False, virtual_keyboard: False
+
+Firefox settings:
+firefox: latest-beta, update_channel: None, save: False
+Starting local web server on port 2000 for directory c:\github\iris2\targets\firefox\local_web
+Retrieving list of candidate builds from https://archive.mozilla.org/pub/firefox/candidates/67.0b19-candidates/
+Found 1 build: build1
+Selected build: build1
+File has already been downloaded: C:\Users\paul.silaghi\.iris\cache\firefox-67.0b19-build1.en-US.win64.exe
+Retrieving list of candidate builds from https://archive.mozilla.org/pub/firefox/candidates/67.0b19-candidates/
+Found 1 build: build1
+Selected build: build1
+Latest available version for beta channel is: 67.0b19
+Loading more test images...
+Executing 1: - [antivirus/insecure_pages_do_not_show.py]: Check browser doesn't show insecure webpage errors
+
+------------------------------------------------------Test Report-------------------------------------------------------
+Application: Firefox, Platform: win, fx_version: 67.0, fx_build_id: 20190509185224, channel: beta
+Passed: 1, Failed: 0, Skipped: 0, Errors 0  -- Total: 1                          Total time: 62.23074388504028 second(s)
+------------------------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------Test session firefox complete----------------------------------------------
+Terminating process.

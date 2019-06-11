@@ -1,0 +1,51 @@
+Preparing data for the Control Center.
+This may take a minute.
+Gathering test info for 'firefox'...
+Loading test images...
+Gathering test info for 'sample'...
+Serving HTTP on 127.0.0.1 port 2000.
+Desired target: firefox
+Found target named Firefox
+Setting firefox to beta
+Setting report to False
+
+----------------------------------------------Test session firefox started----------------------------------------------
+
+Iris settings:
+target: firefox, rerun: False, highlight: False, clear: False, email: False, image_debug: False, level: 20, control: True, locale: en-US, mouse: 0.5, no_check: False, override: False, port: 2000, test: , workdir: C:\Users\paul.silaghi\.iris, exclude: , resize: False, virtual_keyboard: False
+
+Firefox settings:
+firefox: beta, report: False, update_channel: None, save: False
+[Bugzilla] section has properties with no values: [api_key]. Tests blocked by Bugzilla issues will be automatically skipped.
+[GitHub] section has properties with no values: [github_key]. Tests blocked by GitHub issues will be automatically skipped.
+Starting local web server on port 2000 for directory c:\github\iris2\targets\firefox\local_web
+Retrieving list of candidate builds from https://archive.mozilla.org/pub/firefox/candidates/68.0b5-candidates/
+Found 1 build: build1
+Selected build: build1
+Downloading from: https://archive.mozilla.org/pub/firefox/candidates/68.0b5-candidates/build1/win64/en-US/Firefox%20Setup%2068.0b5.exe
+Saving as: C:\Users\paul.silaghi\.iris\cache\firefox-68.0b5-build1.en-US.win64.exe
+Retrieving list of candidate builds from https://archive.mozilla.org/pub/firefox/candidates/68.0b5-candidates/
+Found 1 build: build1
+Selected build: build1
+Latest available version for beta channel is: 68.0b5
+Loading more test images...
+Retrieving list of candidate builds from https://archive.mozilla.org/pub/firefox/candidates/68.0b5-candidates/
+Found 1 build: build1
+Selected build: build1
+File has already been downloaded: C:\Users\paul.silaghi\.iris\cache\firefox-68.0b5-build1.en-US.win64.exe
+Retrieving list of candidate builds from https://archive.mozilla.org/pub/firefox/candidates/68.0b5-candidates/
+Found 1 build: build1
+Selected build: build1
+Latest available version for beta channel is: 68.0b5
+Executing 1: - [antivirus/insecure_pages_do_not_show.py]: Check browser doesn't show insecure webpage errors
+Executing 2: - [antivirus/no_bluescreen_after_private.py]: Test case: No crash or bluescreen after closing a tab while in private browsing mode.
+Executing 3: - [antivirus/no_crash_closing_pinned.py]: [Kaspersky] No crash or bluescreen after closing a pinned tab
+
+------------------------------------------------------Test Report-------------------------------------------------------
+Application: Firefox, Platform: win, fx_version: 68.0, fx_build_id: 20190527103257, channel: beta
+Passed: 3, Failed: 0, Skipped: 0, Errors 0  -- Total: 3                         Total time: 117.23234510421753 second(s)
+------------------------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------Test session firefox complete----------------------------------------------
+Terminating process.

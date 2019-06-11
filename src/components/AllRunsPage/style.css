@@ -1,0 +1,106 @@
+.table__cell {
+  align-items: center;
+  display: flex;
+}
+
+.table__cell-btn {
+  margin: 0 10px;
+}
+
+.ReactTable .rt-thead .rt-th {
+  border: none;
+}
+
+.ReactTable .rt-tbody .rt-td {
+  border: none;
+}
+
+.ReactTable .rt-tbody .rt-tr-group {
+  border: none;
+  background-color: #f1f8ff;
+  margin: 2px 0 2px 0;
+  max-height: 40px;
+}
+
+.ReactTable .rt-thead.-header {
+  box-shadow: none;
+  border-bottom: 1px solid #d7d7db;
+  font-size: 18px;
+  font-weight: bold;
+  color: #737373;
+  margin-bottom: 2px;
+}
+
+.ReactTable {
+  border: none;
+  height: 211px;
+  overflow: auto;
+}
+
+.ReactTable .rt-tbody .rt-tr-group:hover {
+  background-color: #c4daf7;
+  color: white;
+  font-weight: bold;
+}
+.ReactTable .rt-tbody .rt-tr-group:hover button {
+  visibility: visible;
+}
+.ReactTable .rt-tr.selected button {
+  visibility: visible;
+  color: white;
+}
+.ReactTable .rt-tr.selected button:hover {
+  background: rgb(0, 96, 223);
+}
+
+.ReactTable .rt-thead .rt-th.-sort-desc {
+  background-color: rgba(12, 12, 13, 0.1);
+  box-shadow: none;
+}
+.ReactTable .rt-thead .rt-th.-sort-desc span {
+  color: black;
+}
+.ReactTable .rt-thead .rt-th.-sort-asc {
+  background-color: rgba(12, 12, 13, 0.1);
+  box-shadow: none;
+}
+.ReactTable .rt-thead .rt-th.-sort-asc span {
+  color: black;
+}
+
+.ReactTable .rt-td.status-cell {
+  padding: 0;
+  -webkit-box-shadow: 4px 0px 0px 0px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 4px 0px 0px 0px rgba(255, 255, 255, 1);
+  box-shadow: 4px 0px 0px 0px rgba(255, 255, 255, 1);
+}
+
+.no-data-tbody {
+  height: 300px;
+  font-weight: 600;
+  font-size: 28px;
+  color: #b1b1b3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d7d7db;
+  margin-top: 2px;
+}
+
+.rt-th.-sort-asc .sort-icons,
+.rt-th.-sort-desc .sort-icons {
+  display: flex;
+}
+
+.-sort-asc .sort-up {
+  color: #0060df;
+}
+.-sort-desc .sort-down {
+  color: #0060df;
+}
+
+.ReactTable .rt-tbody {
+  overflow: overlay;
+  overflow: auto;
+  overflow-x: hidden;
+}

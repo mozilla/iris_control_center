@@ -1,0 +1,73 @@
+2019-03-29 10:50:36,859 [INFO] [src.__main__] Desired target: firefox
+2019-03-29 10:50:43,942 [INFO] [src.__main__] Found target named Firefox
+2019-03-29 10:50:43,981 [INFO] [src.__main__] ['c:\\github\\iris2\\tests\\firefox', '-vs', '-r ', '-s', '-p', 'no:terminal']
+2019-03-29 10:50:44,925 [INFO] [src.base.target] ** Test session firefox started **
+2019-03-29 10:50:44,927 [INFO] [src.base.target] Iris settings:
+2019-03-29 10:50:44,930 [INFO] [src.base.target] update_channel: None, firefox: latest-beta, locale: en-US
+2019-03-29 10:50:44,933 [INFO] [src.base.target] 
+
+2019-03-29 10:50:44,946 [INFO] [targets.firefox.app] Starting local web server on port 2000 for directory c:\github\iris2\targets\firefox\local_web
+2019-03-29 10:50:54,525 [INFO] [mozdownload.scraper] Retrieving list of candidate builds from https://archive.mozilla.org/pub/firefox/candidates/67.0b6-candidates/
+2019-03-29 10:50:54,748 [INFO] [mozdownload.scraper] Found 1 build: build1
+2019-03-29 10:50:54,750 [INFO] [mozdownload.scraper] Selected build: build1
+2019-03-29 10:50:55,159 [INFO] [mozdownload.scraper] Downloading from: https://archive.mozilla.org/pub/firefox/candidates/67.0b6-candidates/build1/win64/en-US/Firefox%20Setup%2067.0b6.exe
+2019-03-29 10:50:55,164 [INFO] [mozdownload.scraper] Saving as: C:\Users\paul.silaghi\.iris2\cache\firefox-67.0b6-build1.en-US.win64.exe
+2019-03-29 10:51:09,032 [INFO] [mozdownload.scraper] Retrieving list of candidate builds from https://archive.mozilla.org/pub/firefox/candidates/67.0b6-candidates/
+2019-03-29 10:51:09,083 [INFO] [mozdownload.scraper] Found 1 build: build1
+2019-03-29 10:51:09,085 [INFO] [mozdownload.scraper] Selected build: build1
+2019-03-29 10:51:09,145 [INFO] [targets.firefox.firefox_app.fx_browser] Latest available version for beta channel is: 67.0b6
+2019-03-29 10:51:09,152 [INFO] [targets.firefox.app] Executing: - [antivirus/insecure_pages_do_not_show.py]: Check browser doesn't show insecure webpage errors
+2019-03-29 10:52:15,737 [INFO] [targets.firefox.app] Executing: - [antivirus/no_bluescreen_after_private.py]: Test case: No crash or bluescreen after closing a tab while in private browsing mode.
+2019-03-29 10:52:41,584 [INFO] [targets.firefox.app] Executing: - [antivirus/no_crash_closing_pinned.py]: [Kaspersky] No crash or bluescreen after closing a pinned tab
+2019-03-29 10:53:15,094 [INFO] [targets.firefox.app] Executing: - [awesomebar/add_links_keyboard_shortcuts.py]: This test case adds links using 'CTRL' + 'ENTER' keys
+2019-03-29 10:53:35,581 [WARNING] [targets.firefox.bug_manager] Bugzilla section missing from config.ini
+2019-03-29 10:53:35,584 [INFO] [targets.firefox.app] Test skipped: - [awesomebar/alt_up_down_keys_in_awesomebar.py]: Alt+UP/DOWN Keys - in the Awesome Bar.
+2019-03-29 10:53:37,485 [INFO] [targets.firefox.app] Executing: - [awesomebar/awesomebar_search_after_user_input.py]: This test case checks the awesomebar search after user input.
+2019-03-29 10:54:02,518 [INFO] [targets.firefox.app] Executing: - [awesomebar/bookmark_a_highlighted_link.py]: This test case checks the position of the bookmark drop down for a highlighted link.
+2019-03-29 10:54:17,351 [INFO] [targets.firefox.app] Executing: - [awesomebar/change_search_engine_positions.py]: his test case verifies that changing the search engines positions the change is applied in '                     'awesome bar too.
+2019-03-29 10:54:50,097 [INFO] [targets.firefox.app] Executing: - [awesomebar/delete_history_from_url_bar_completion_list.py]: This test case deletes history from the URL bar completion list.
+2019-03-29 10:55:25,281 [INFO] [targets.firefox.app] Executing: - [awesomebar/disable_one_off_searches_from_awesomebar.py]: This test case disables one-off searches from the awesomebar.
+2019-03-29 10:56:05,049 [WARNING] [targets.firefox.bug_manager] Github section missing from config.ini
+2019-03-29 10:56:07,043 [INFO] [targets.firefox.app] Executing: - [awesomebar/disable_web_search_awesomebar.py]: This test case disables the web search in the awesomebar.
+2019-03-29 10:56:52,360 [WARNING] [targets.firefox.bug_manager] Github section missing from config.ini
+2019-03-29 10:56:52,378 [WARNING] [targets.firefox.bug_manager] Github section missing from config.ini
+2019-03-29 10:56:54,270 [INFO] [targets.firefox.app] Executing: - [awesomebar/key_navigation_high_contrast_theme.py]: This test case performs key navigation in the URL drop-down in high contrast theme..
+2019-03-29 10:56:58,478 [ERROR] [src.core.api.finder.pattern] Pattern creation for stop_wear_theme.png failed for caller c:\github\iris2\tests\firefox\awesomebar\key_navigation_high_contrast_theme.py.
+2019-03-29 10:56:58,483 [ERROR] [src.core.api.finder.pattern] Image not found. Either it is in the wrong platform folder, or it does not exist.
+2019-03-29 10:57:03,669 [INFO] [targets.firefox.app] Executing: - [awesomebar/mouse_handling_in_awesomebar.py]: Mouse handling - in the awesomebar.
+2019-03-29 10:57:29,320 [INFO] [targets.firefox.app] Executing: - [awesomebar/mouse_position_does_not_affect_a_search.py]: This test case checks that mouse position does not affect a search from awesomebar.
+2019-03-29 10:57:49,398 [INFO] [targets.firefox.app] Executing: - [awesomebar/navigate_page_without_entering_http_protocol.py]: This test case checks that navigation to a page without entering the 'http://' protocol works '                     'correctly.
+2019-03-29 10:58:03,244 [INFO] [targets.firefox.app] Executing: - [awesomebar/navigate_through_one_off_searches_using_keyboard_keys.py]: This test case navigates through one-off searches using the keyboard keys
+2019-03-29 10:59:01,292 [WARNING] [targets.firefox.bug_manager] Bugzilla section missing from config.ini
+2019-03-29 10:59:01,296 [INFO] [targets.firefox.app] Test skipped: - [ci_tests/basic_image_search_screenshot.py]: This test verifies if Pyautogui/MSS screenshot and image search are working properly in a '                     'framebuffer environment..
+2019-03-29 10:59:01,314 [WARNING] [targets.firefox.bug_manager] Bugzilla section missing from config.ini
+2019-03-29 10:59:01,317 [INFO] [targets.firefox.app] Test skipped: - [ci_tests/basic_mouse_functions.py]: This test will verify if Pyautogui mouse is working properly in a framebuffer environment.
+2019-03-29 10:59:03,197 [INFO] [targets.firefox.app] Executing: - [update/background_update.py]: This is a test for Firefox background update.
+2019-03-29 10:59:12,569 [INFO] [targets.firefox.app] Executing: - [update/manual_update.py]: This is a test for Firefox manual update.
+2019-03-29 10:59:19,729 [INFO] [src.configuration.config_parser] 
+------------------------------------------------------------------------------------------------------------------------
+Application: Firefox,Platform: win
+Passed: 9, Failed: 3, Skipped: 3, Errors 5   -- Total: 20                       Total time: 405.26403307914734 second(s)
+
+The following tests did not pass:
+c:\github\iris2\tests\firefox\antivirus\no_bluescreen_after_private.py
+
+c:\github\iris2\tests\firefox\awesomebar\add_links_keyboard_shortcuts.py
+
+c:\github\iris2\tests\firefox\awesomebar\awesomebar_search_after_user_input.py
+
+c:\github\iris2\tests\firefox\awesomebar\delete_history_from_url_bar_completion_list.py
+
+c:\github\iris2\tests\firefox\awesomebar\key_navigation_high_contrast_theme.py
+
+c:\github\iris2\tests\firefox\awesomebar\mouse_handling_in_awesomebar.py
+
+c:\github\iris2\tests\firefox\update\background_update.py
+
+c:\github\iris2\tests\firefox\update\manual_update.py
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+2019-03-29 10:59:20,043 [INFO] [src.base.target] ** Test session firefox complete **
+2019-03-29 10:59:20,046 [INFO] [targets.firefox.app] Terminating process.

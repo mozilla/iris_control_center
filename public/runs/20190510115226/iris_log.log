@@ -1,0 +1,49 @@
+[Bugzilla] section has properties with no values: [api_key]. Tests blocked by Bugzilla issues will be automatically skipped.
+[GitHub] section has properties with no values: [github_key]. Tests blocked by GitHub issues will be automatically skipped.
+Preparing data for the Control Center.
+This may take a minute.
+Gathering test info for 'firefox'...
+Loading test images...
+Gathering test info for 'notepad'...
+Serving HTTP on 127.0.0.1 port 2000.
+Desired target: firefox
+1
+2
+Found target named Firefox
+Setting firefox to beta
+
+----------------------------------------------Test session firefox started----------------------------------------------
+
+Iris settings:
+highlight: False, port: 2000, test: , application: firefox, override: False, resize: False, workdir: C:\Users\paul.silaghi\.iris, exclude: , report: False, rerun: False, control: True, image_debug: False, level: 20, locale: en-US, email: False, no_check: False, clear: False, mouse: 0.5, virtual_keyboard: False
+
+Firefox settings:
+update_channel: None, firefox: beta, save: False
+Starting local web server on port 2000 for directory c:\github\iris2\targets\firefox\local_web
+Retrieving list of candidate builds from https://archive.mozilla.org/pub/firefox/candidates/67.0b19-candidates/
+Found 1 build: build1
+Selected build: build1
+Downloading from: https://archive.mozilla.org/pub/firefox/candidates/67.0b19-candidates/build1/win64/en-US/Firefox%20Setup%2067.0b19.exe
+Saving as: C:\Users\paul.silaghi\.iris\cache\firefox-67.0b19-build1.en-US.win64.exe
+Retrieving list of candidate builds from https://archive.mozilla.org/pub/firefox/candidates/67.0b19-candidates/
+Found 1 build: build1
+Selected build: build1
+Latest available version for beta channel is: 67.0b19
+Loading more test images...
+Retrieving list of candidate builds from https://archive.mozilla.org/pub/firefox/candidates/67.0b19-candidates/
+Found 1 build: build1
+Selected build: build1
+File has already been downloaded: C:\Users\paul.silaghi\.iris\cache\firefox-67.0b19-build1.en-US.win64.exe
+Retrieving list of candidate builds from https://archive.mozilla.org/pub/firefox/candidates/67.0b19-candidates/
+Found 1 build: build1
+Selected build: build1
+Latest available version for beta channel is: 67.0b19
+Executing 1: - [antivirus/insecure_pages_do_not_show.py]: Check browser doesn't show insecure webpage errors
+Executing 2: - [antivirus/no_bluescreen_after_private.py]: Test case: No crash or bluescreen after closing a tab while in private browsing mode.
+Executing 3: - [antivirus/no_crash_closing_pinned.py]: [Kaspersky] No crash or bluescreen after closing a pinned tab
+
+------------------------------------------------------Test Report-------------------------------------------------------
+Application: Firefox, Platform: win, fx_version: 67.0, fx_build_id: 20190509185224, channel: beta
+Passed: 3, Failed: 0, Skipped: 0, Errors 0  -- Total: 3                         Total time: 128.23933100700378 second(s)
+------------------------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,36 @@
+.react-confirm-alert-body {
+  color: black;
+  width: 501px;
+  font-family: 'Open Sans';
+  font-size: 18px;
+}
+
+.react-confirm-alert-body > h1 {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.react-confirm-alert-button-group {
+  justify-content: flex-end;
+}
+
+.react-confirm-alert-button-group > button {
+  background-color: rgba(12, 12, 13, 0.1);
+  color: black;
+  width: 132px;
+  margin-right: 0;
+  margin-left: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.react-confirm-alert-button-group > button:hover {
+  background-color: #0060df;
+  color: white;
+}
+
+.react-confirm-alert-button-group > button:focus {
+  background-color: #0060df;
+  color: white;
+  outline: none;
+}

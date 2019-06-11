@@ -1,0 +1,51 @@
+[Bugzilla] section has properties with no values: [api_key]. Tests blocked by Bugzilla issues will be automatically skipped.
+[GitHub] section has properties with no values: [github_key]. Tests blocked by GitHub issues will be automatically skipped.
+Desired target: firefox
+Loading test images...
+1
+2
+Found target named Firefox
+List of all tests found: [c:\github\iris2\tests\firefox\antivirus\insecure_pages_do_not_show.py, c:\github\iris2\tests\firefox\antivirus\no_bluescreen_after_private.py, c:\github\iris2\tests\firefox\antivirus\no_crash_closing_pinned.py, c:\github\iris2\tests\firefox\antivirus_interoperability\data_after_restart.py, c:\github\iris2\tests\firefox\antivirus_interoperability\firefox_build_restart.py, c:\github\iris2\tests\firefox\antivirus_interoperability\firefox_hijacking.py, c:\github\iris2\tests\firefox\antivirus_interoperability\firefox_hijacking_default_search.py, c:\github\iris2\tests\firefox\antivirus_interoperability\no_navigation_issues.py, c:\github\iris2\tests\firefox\antivirus_interoperability\not_crash_options_enabled.py, c:\github\iris2\tests\firefox\antivirus_interoperability\page_loads_not_stall.py, c:\github\iris2\tests\firefox\antivirus_interoperability\regular_usage.py, c:\github\iris2\tests\firefox\antivirus_interoperability\sites_loaded_5_tabs_dont_crash.py, c:\github\iris2\tests\firefox\antivirus_interoperability\tls_authentication.py, c:\github\iris2\tests\firefox\antivirus_interoperability\tls_websites.py]
+
+----------------------------------------------Test session firefox started----------------------------------------------
+
+Iris settings:
+control: False, no_check: False, report: False, email: False, port: 2000, rerun: False, image_debug: False, locale: en-US, override: False, mouse: 0.5, resize: False, highlight: False, application: firefox, virtual_keyboard: False, clear: False, workdir: C:\Users\paul.silaghi\.iris, level: 20, exclude: , test: antivirus
+
+Firefox settings:
+firefox: latest-beta, update_channel: None, save: False
+Starting local web server on port 2000 for directory c:\github\iris2\targets\firefox\local_web
+Retrieving list of candidate builds from https://archive.mozilla.org/pub/firefox/candidates/67.0b19-candidates/
+Found 1 build: build1
+Selected build: build1
+File has already been downloaded: C:\Users\paul.silaghi\.iris\cache\firefox-67.0b19-build1.en-US.win64.exe
+Retrieving list of candidate builds from https://archive.mozilla.org/pub/firefox/candidates/67.0b19-candidates/
+Found 1 build: build1
+Selected build: build1
+Latest available version for beta channel is: 67.0b19
+Loading more test images...
+Executing 1: - [antivirus/insecure_pages_do_not_show.py]: Check browser doesn't show insecure webpage errors
+Executing 2: - [antivirus/no_bluescreen_after_private.py]: Test case: No crash or bluescreen after closing a tab while in private browsing mode.
+Executing 3: - [antivirus/no_crash_closing_pinned.py]: [Kaspersky] No crash or bluescreen after closing a pinned tab
+Executing 4: - [antivirus_interoperability/data_after_restart.py]: No data loss after forced restart.
+Executing 5: - [antivirus_interoperability/firefox_build_restart.py]: Firefox Build Restart.
+Executing 6: - [antivirus_interoperability/firefox_hijacking.py]: Firefox hijacking.
+Executing 7: - [antivirus_interoperability/firefox_hijacking_default_search.py]: Firefox hijacking - default search engine.
+Executing 8: - [antivirus_interoperability/no_navigation_issues.py]: Alexa Top sites - no navigation issues.
+Executing 9: - [antivirus_interoperability/not_crash_options_enabled.py]: Firefox does not crash - all antivirus options enabled.
+Executing 10: - [antivirus_interoperability/page_loads_not_stall.py]: [Avast] Page loads should not stall - 1373365.
+Executing 11: - [antivirus_interoperability/regular_usage.py]: Firefox Regular Usage.
+Executing 12: - [antivirus_interoperability/sites_loaded_5_tabs_dont_crash.py]: Multiple Alexa top sites loaded in 5 tabs don't crash.
+Executing 13: - [antivirus_interoperability/tls_authentication.py]: Check security.enterprise_roots.enabled set to true doesn't break TLS Client Authentication.
+Executing 14: - [antivirus_interoperability/tls_websites.py]: ebsites using TLS 1.3.
+
+------------------------------------------------------Test Report-------------------------------------------------------
+Application: Firefox, Platform: win, fx_version: 67.0, fx_build_id: 20190509185224, channel: beta
+Passed: 13, Failed: 1, Skipped: 0, Errors 0  -- Total: 14                       Total time: 507.30459117889404 second(s)
+
+The following tests did not pass:
+regular_usage.py
+
+
+------------------------------------------------------------------------------------------------------------------------
+
