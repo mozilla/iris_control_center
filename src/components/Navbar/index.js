@@ -3,28 +3,74 @@ import styled from 'styled-components';
 import NavbarItem from './NavbarItem';
 import { Route } from 'react-router-dom';
 import ApiClient from '../apiClient';
+import EscapeOutside from 'react-escape-outside';
+import Icon from '../Icon';
 
 const Aside = styled.aside`
-  width: 271px;
-  background-color: #d7d7db;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  width: 0;
+  z-index: 10;
 `;
 const Ul = styled.ul`
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 `;
 const Nav = styled.nav`
   width: 100%;
+`;
+const NavWrapper = styled.div`
+  align-items: center;
+  background-color: #d7d7db;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  ${props => props.collapsed && 'transform: translateX(-100%);'}
+  transition: transform 0.4s ease-out;
+  width: 270px;
+  z-index: 10;
+`;
+const Toggler = styled.button`
+  border: none;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 11;
+`;
+const Overlay = styled.div`
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 9;
+`;
+const CloseButton = styled.button`
+  margin: 0 auto;
+  margin-right: 0;
+  border: none;
+  /* padding: 0 0 19px 0; */
+  background: none;
+  &:active,
+  &:focus {
+    outline: none;
+    border: none;
+  }
+  color: #0060df;
+  cursor: pointer;
 `;
 
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      targets: null
+      targets: null,
+      collapsed: true
     };
   }
 
@@ -41,20 +87,43 @@ class Navbar extends React.Component {
     });
   }
 
+  handleToggleCollapsed = () => {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
+  };
+
+  handleEscapeOutside = () => {
+    this.setState({ collapsed: true });
+  };
+
   render() {
     return (
       <Aside className={this.props.className}>
-        <Nav>
-          <Ul>
-            <Route path="/runs">
-              <NavbarItem label="All Runs" basePath="/runs" />
-            </Route>
+        {!this.state.collapsed && <Overlay />}
+        <EscapeOutside onEscapeOutside={this.handleEscapeOutside}>
+          <Toggler onClick={this.handleToggleCollapsed}> >> </Toggler>
+          <NavWrapper collapsed={this.state.collapsed}>
+            <CloseButton type="button" onClick={this.handleToggleCollapsed}>
+              <Icon icon="exit" />
+            </CloseButton>
+            <Nav>
+              <Ul>
+                <Route path="/runs">
+                  <NavbarItem label="All Runs" basePath="/runs" />
+                </Route>
 
-            <Route path="/new">
-              <NavbarItem label="Create New Run" basePath="/new" sublinks={this.state.targets} />
-            </Route>
-          </Ul>
-        </Nav>
+                <Route path="/new">
+                  <NavbarItem
+                    label="Create New Run"
+                    basePath="/new"
+                    sublinks={this.state.targets}
+                  />
+                </Route>
+              </Ul>
+            </Nav>
+          </NavWrapper>
+        </EscapeOutside>
       </Aside>
     );
   }
