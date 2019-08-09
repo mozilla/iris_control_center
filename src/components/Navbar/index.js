@@ -36,6 +36,14 @@ const NavWrapper = styled.div`
 `;
 const Toggler = styled.button`
   border: none;
+  background: none;
+  &:active,
+  &:focus {
+    outline: none;
+    border: none;
+  }
+  color: #0060df;
+  cursor: pointer;
   left: 0;
   position: absolute;
   top: 50%;
@@ -51,8 +59,8 @@ const Overlay = styled.div`
   z-index: 9;
 `;
 const CloseButton = styled.button`
-  margin: 0 auto;
-  margin-right: 0;
+  /* margin: 0 auto; */
+  /* margin-right: 0; */
   border: none;
   /* padding: 0 0 19px 0; */
   background: none;
@@ -63,6 +71,9 @@ const CloseButton = styled.button`
   }
   color: #0060df;
   cursor: pointer;
+  position: absolute;
+  right: 0;
+  transform: translate(100%, -100%);
 `;
 
 class Navbar extends React.Component {
@@ -102,11 +113,10 @@ class Navbar extends React.Component {
       <Aside className={this.props.className}>
         {!this.state.collapsed && <Overlay />}
         <EscapeOutside onEscapeOutside={this.handleEscapeOutside}>
-          <Toggler onClick={this.handleToggleCollapsed}> >> </Toggler>
+          <Toggler onClick={this.handleToggleCollapsed}>
+            <Icon icon={this.state.collapsed ? 'ChevronRight' : 'ChevronLeft'} size="lg" />
+          </Toggler>
           <NavWrapper collapsed={this.state.collapsed}>
-            <CloseButton type="button" onClick={this.handleToggleCollapsed}>
-              <Icon icon="exit" />
-            </CloseButton>
             <Nav>
               <Ul>
                 <Route path="/runs">
