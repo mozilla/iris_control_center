@@ -35,20 +35,28 @@ const NavWrapper = styled.div`
   z-index: 10;
 `;
 const Toggler = styled.button`
+  align-items: center;
   border: none;
   background: none;
+  border-radius: 0 4px 4px 0;
+  display: flex;
+  padding: 4px 10px 4px 4px;
   &:active,
   &:focus {
     outline: none;
     border: none;
   }
-  color: #0060df;
   cursor: pointer;
-  left: 0;
+  color: #0060df;
   position: absolute;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 11;
+  ${props =>
+    props.collapsed &&
+    `
+    transform: translate(100%, -50%);
+  `};
 `;
 const Overlay = styled.div`
   position: fixed;
@@ -57,23 +65,6 @@ const Overlay = styled.div`
   background-color: black;
   opacity: 0.5;
   z-index: 9;
-`;
-const CloseButton = styled.button`
-  /* margin: 0 auto; */
-  /* margin-right: 0; */
-  border: none;
-  /* padding: 0 0 19px 0; */
-  background: none;
-  &:active,
-  &:focus {
-    outline: none;
-    border: none;
-  }
-  color: #0060df;
-  cursor: pointer;
-  position: absolute;
-  right: 0;
-  transform: translate(100%, -100%);
 `;
 
 class Navbar extends React.Component {
@@ -113,9 +104,6 @@ class Navbar extends React.Component {
       <Aside className={this.props.className}>
         {!this.state.collapsed && <Overlay />}
         <EscapeOutside onEscapeOutside={this.handleEscapeOutside}>
-          <Toggler onClick={this.handleToggleCollapsed}>
-            <Icon icon={this.state.collapsed ? 'ChevronRight' : 'ChevronLeft'} size="lg" />
-          </Toggler>
           <NavWrapper collapsed={this.state.collapsed}>
             <Nav>
               <Ul>
@@ -132,6 +120,9 @@ class Navbar extends React.Component {
                 </Route>
               </Ul>
             </Nav>
+            <Toggler collapsed={this.state.collapsed} onClick={this.handleToggleCollapsed}>
+              <Icon icon={this.state.collapsed ? 'ChevronRight' : 'ChevronLeft'} size="lg" />
+            </Toggler>
           </NavWrapper>
         </EscapeOutside>
       </Aside>
