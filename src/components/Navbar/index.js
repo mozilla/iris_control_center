@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import NavbarItem from './NavbarItem';
 import { Route } from 'react-router-dom';
 import ApiClient from '../apiClient';
@@ -34,20 +34,23 @@ const NavWrapper = styled.div`
   width: 270px;
   z-index: 10;
 `;
+const animGlow = keyframes`
+  0% {
+		box-shadow: 0 0 rgba(0, 96, 223, 1);
+	}
+	100% {
+		box-shadow: 0 0 10px 8px transparent;
+	}
+`;
 const Toggler = styled.button`
   align-items: center;
-  border: none;
   background: none;
-  border-radius: 0 4px 4px 0;
-  display: flex;
-  padding: 4px 10px 4px 4px;
-  &:active,
-  &:focus {
-    outline: none;
-    border: none;
-  }
-  cursor: pointer;
+  border: none;
+  border-radius: 0 20% 20% 0;
   color: #0060df;
+  cursor: pointer;
+  display: flex;
+  padding: 5px;
   position: absolute;
   right: 0;
   top: 50%;
@@ -57,6 +60,20 @@ const Toggler = styled.button`
     `
     transform: translate(100%, -50%);
   `};
+  ${props =>
+    !props.collapsed &&
+    `
+    border-radius: 20% 0 0 20%;
+  `};
+
+  &:active,
+  &:focus {
+    outline: none;
+    border: none;
+  }
+  &:hover {
+    animation: ${animGlow} 1s ease infinite;
+  }
 `;
 const Overlay = styled.div`
   position: fixed;
