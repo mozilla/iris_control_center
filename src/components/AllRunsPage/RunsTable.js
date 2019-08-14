@@ -70,14 +70,14 @@ const TABLE_COLUMNS = [
   {
     accessor: 'failed',
     Cell: data => (
-      <StatusCell failedTests={data.value} {...data.value && { title: `${data.value} Failed` }} />
+      <StatusCell failedTests={data.value} {...(data.value && { title: `${data.value} Failed` })} />
     ),
     className: 'table__cell status-cell'
   },
   {
     Header: () => (
       <HeaderCell center>
-        <span>Target</span>
+        <span title="Target app">Target</span>
         <SortIconsContainer className="sort-icons">
           <Icon icon="sort" />
         </SortIconsContainer>
@@ -90,7 +90,7 @@ const TABLE_COLUMNS = [
   {
     Header: () => (
       <HeaderCell>
-        <span>Run ID</span>
+        <span title="Run ID">Run ID</span>
         <SortIconsContainer className="sort-icons">
           <Icon icon="sort" />
         </SortIconsContainer>
@@ -103,7 +103,7 @@ const TABLE_COLUMNS = [
   {
     Header: () => (
       <HeaderCell>
-        <span>Locale</span>
+        <span title="Locale">Locale</span>
         <SortIconsContainer className="sort-icons">
           <Icon icon="sort" />
         </SortIconsContainer>
@@ -116,7 +116,7 @@ const TABLE_COLUMNS = [
   {
     Header: () => (
       <HeaderCell>
-        <span>Total Tests</span>
+        <span title="Total Tests">Tests</span>
         <SortIconsContainer className="sort-icons">
           <Icon icon="sort" />
         </SortIconsContainer>
@@ -124,12 +124,12 @@ const TABLE_COLUMNS = [
     ),
     accessor: 'total',
     className: 'table__cell',
-    minWidth: 110
+    minWidth: 60
   },
   {
     Header: () => (
       <HeaderCell>
-        <span>Duration</span>
+        <span title="Duration of run">Duration</span>
         <SortIconsContainer className="sort-icons">
           <Icon icon="sort" />
         </SortIconsContainer>
@@ -158,7 +158,7 @@ const TABLE_COLUMNS = [
   {
     Header: () => (
       <HeaderCell>
-        <span>Completed</span>
+        <span title="Completion date">Completed</span>
         <SortIconsContainer className="sort-icons">
           <Icon icon="sort" />
         </SortIconsContainer>
@@ -186,6 +186,7 @@ class RunsTable extends React.Component {
       Cell: data => (
         <DeleteButton
           type="button"
+          title="Delete run from local disk"
           onClick={event => {
             event.stopPropagation();
             this.props.onDelete(data.original.id);
@@ -222,17 +223,17 @@ class RunsTable extends React.Component {
           },
           {
             id: 'actions',
-            value: 50
+            value: 60
           }
         ]}
         showPagination={false}
         resizable={false}
         minRows={4}
         pageSize={this.props.runs.length}
-        {...!this.props.runs.length && {
+        {...(!this.props.runs.length && {
           TbodyComponent: () => <div className="no-data-tbody">No test results yet.</div>,
           NoDataComponent: () => null
-        }}
+        })}
         getTrProps={(state, rowInfo, column) => {
           return {
             onClick: () => {
