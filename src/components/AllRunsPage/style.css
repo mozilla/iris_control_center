@@ -29,6 +29,14 @@
   font-weight: bold;
   color: #737373;
   margin-bottom: 2px;
+  overflow-x: hidden;
+}
+
+.ReactTable .rt-thead .rt-tr {
+  margin-right: -18px;
+  padding-right: 18px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .ReactTable {
@@ -100,7 +108,7 @@
 }
 
 .ReactTable .rt-tbody {
-  overflow: overlay;
-  overflow: auto;
+  overflow-y: scroll;
+  /* overflow: overlay; */
   overflow-x: hidden;
 }
