@@ -8,7 +8,7 @@
     "@fortawesome/react-fontawesome": "0.1.4",
     "bootstrap": "4.3.1",
     "moment": "2.24.0",
-    "nanoid": "2.0.3",
+    "nanoid": "3.1.31",
     "normalize": "0.3.1",
     "react": "16.8.6",
     "react-confirm-alert": "2.4.1",
